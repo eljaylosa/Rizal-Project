@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+ 
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c1/Rizal_Shrine_Calamba_2023.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) blur(3px) brightness(60%) contrast(130%);
+  z-index: -1; 
+  
+}
+
+main {
+  position: relative;
+  z-index: 1; 
+}
+
+nav {
+  background-color: transparent;
+  padding: 20px
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+nav ul a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin: 5px 10px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  transition: .1s ease-in-out;
+}
+nav ul a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  background-color: rgb(255, 244, 244);
+}
+
+
+
+/* RIZAL MAIN PROFILE */
+.rizal-main-profile {
+  height: 90vh;
+  align-items: center;
+  display: flex;
+}
+.rizal-main-title {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+  color: white;
+}
+.rizal-main-title h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.rizal-main-title h2 {
+  font-size: 30px;
+}
+.rizal-main-title p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* === Rizal's Image Style === */
+.rizal-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.rizal-image img {
+  width: 500px;
+  height: 600px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Will upadate it later */
+/* MOBILE NAV BAR STYLES */
+/* FOR MAIN */
+.mobile-nav-container {
+ display: none;
+}
+/* ====================== */
