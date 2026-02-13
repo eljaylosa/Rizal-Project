@@ -4,57 +4,465 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css">
-
-  <title>Rizal’s Family, Childhood, and Early Education</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <title>RizalWiki</title>
 </head>
 <body>
-  <div class="background-image"></div>
-  <main>
+  <!-- Wikipedia Header -->
+  <header class="wikipedia-header">
+    <div class="header-top">
+      <div class="wikipedia-logo">
+        <span>W</span>
+      </div>
+      <div class="header-links">
+        <a href="#">Not logged in</a>
+        <a href="members.html" id="members-toggle">About Us</a>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="header-namespaces">
+        <a href="#" class="active">Article</a>
+        <a href="members.html">About Us</a>
+      </div>
+      <!-- <div class="header-actions">
+        <a href="#">Read</a>
+        <a href="#">Edit</a>
+        <a href="#">View history</a>
+      </div> -->
+      <div class="search-container">
+        <input type="text" placeholder="Search RizalWiki" id="searchInput">
+        <button id="searchButton"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="myths/myths.html">Myths</a></li>
-        <li><a href="#">Rizal's Identity</a></li>
-        <li><a href="#">Rizal's Family</a></li>
-        <li><a href="#">Rizal's Early Education</a></li>
-        <li>
-          <div class="mobile-nav-container">
-            <div class="hamburger">
-              <!-- hamburger Icon -->
-               <button>?</button>
-            </div>
-            <div class="mobile-nav">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  
-  
-    <section class="rizal-main-profile">
-      <div class="rizal-main-title">
-        <h1>Rizal’s Family, Childhood, and Early Education</h1>
-        <h2>
-          Philippine National Hero
-        </h2>
+  <!-- Sidebar Toggle Button (Mobile) -->
+  <button class="sidebar-toggle" id="sidebarToggle">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Main Container -->
+  <div class="wikipedia-container">
+    <!-- Left Sidebar -->
+    <aside class="wikipedia-sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <a href="#">
+          <span class="wiki-logo">W</span>
+          <span class="wiki-text">RizalWiki</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <!-- <div class="nav-section">
+          <h3>Main</h3>
+          <ul>
+            <li><a href="#">Main page</a></li>
+            <li><a href="#">Contents</a></li>
+            <li><a href="#">Current events</a></li>
+            <li><a href="#">Random article</a></li>
+            <li><a href="#">About Wikipedia</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </div> -->
+        
+        <!-- <div class="nav-section">
+          <h3>Contribute</h3>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Learn to edit</a></li>
+            <li><a href="#">Community portal</a></li>
+            <li><a href="#">Recent changes</a></li>
+            <li><a href="#">Upload file</a></li>
+          </ul>
+        </div> -->
+        
+        <div class="nav-section">
+          <h3>Rizal Topics</h3>
+          <ul>
+            <li><a href="#identity">Identity</a></li>
+            <li><a href="#family">Family</a></li>
+            <li><a href="#siblings">Siblings</a></li>
+            <li><a href="#uncles">Uncles</a></li>
+            <li><a href="#education">Early Education</a></li>
+            <li><a href="#injustice">Injustice</a></li>
+            <li><a href="#myths">Myths</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="wikipedia-content" id="wikipedia-content">
+      <!-- Article Title -->
+      <h1 class="article-title">Jose Rizal - Life, Family, Childhood, and Early Education (Group - 3)</h1>
+      
+      <div class="article-subtitle">Filipino national hero and polymath</div>
+
+      <!-- Infobox -->
+      <table class="infobox">
+        <tr>
+          <th colspan="2" class="infobox-header">Jose Rizal</th>
+        </tr>
+        <tr>
+          <td colspan="2" class="infobox-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Jose_Rizal_full.jpg" alt="Jose Rizal">
+            <div class="image-caption">A 1901 photograph of Rizal at age 35</div>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-subheader">Born</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            June 19, 1861<br>
+            <a href="https://en.wikipedia.org/wiki/Rizal_Shrine_(Calamba)" target="_blank">Calamba</a>, <a href="https://en.wikipedia.org/wiki/Rizal_Shrine_(Calamba)" target="_blank">Laguna</a>, <a href="https://en.wikipedia.org/wiki/History_of_the_Philippines_(1565%E2%80%931898)#Spanish_colonization" target="_blank">Spanish Philippines</a>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-subheader">Died</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            December 30, 1896 (aged 35)<br>
+            <a href="https://en.wikipedia.org/wiki/Rizal_Park" target="_blank">Bagumbayan Field</a>, <a href="https://en.wikipedia.org/wiki/Rizal_Park" target="_blank">Manila</a>, Spanish Philippines
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-subheader">Other names</th>
+        </tr>
+        <tr>
+          <td colspan="2">Pepe,<sup>[1]</sup> Dr. Jose Rizal</td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-subheader">Occupation</th>
+        </tr>
+        <tr>
+          <td colspan="2">Polymath, writer, poet, novelist, educator, scientist, linguist, traveler, satirist</td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-subheader">Known for</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="https://noli-me-tangere.fandom.com/wiki/Noli_Me_Tangere_Wiki" target="_blank">Noli Me Tangere</a><br>
+            <a href="https://en.wikipedia.org/wiki/El_filibusterismo" target="_blank">El Filibusterismo</a><br>
+            <a href="https://en.wikipedia.org/wiki/Filipino_nationalism" target="_blank">Filipino nationalism</a>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-subheader">Parents</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="https://en.wikipedia.org/wiki/Francisco_Rizal_Mercado" target="_blank">Francisco Mercado</a> (father)<br>
+            <a href="https://en.wikipedia.org/wiki/Teodora_Alonso_Realonda" target="_blank">Teodora Alonso</a> (mother)
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2" class="infobox-subheader">Awards</th>
+        </tr>
+        <tr>
+          <td colspan="2">National Hero of the Philippines</td>
+        </tr>
+      </table>
+
+      <!-- Lead Paragraph -->
+      <p class="lead">
+        <strong>Jose Protacio Rizal Mercado y Alonso Realonda</strong> (June 19, 1861 – December 30, 1896) was a Filipino <a target="_blank" href="https://en.wikipedia.org/wiki/Nationalism">nationalist</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/Polymath">polymath</a>, and poet during the <a target="_blank" href="https://en.wikipedia.org/wiki/History_of_the_Philippines_(1565%E2%80%931898)#Background">Spanish colonial period</a> of the Philippines.<sup>[2]</sup> He is considered the national hero (Bayani) of the Philippines.<sup>[3]</sup> An intellectual and reformist, Rizal's works advocated for reforms in the Philippines during Spanish colonial rule.<sup>[4]</sup>
+      </p>
+
+      <!-- Table of Contents -->
+      <div class="toc">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#identity"><span class="toc-number">1</span> Identity</a></li>
+          <li><a href="#family"><span class="toc-number">2</span> Family</a>
+            <ul>
+              <li><a href="#parents"><span class="toc-number">2.1</span> Parents</a></li>
+              <li><a href="#siblings"><span class="toc-number">2.2</span> Siblings</a></li>
+              <li><a href="#uncles"><span class="toc-number">2.3</span> Uncles</a></li>
+            </ul>
+          </li>
+          <li><a href="#education"><span class="toc-number">3</span> Early Education</a></li>
+          <li><a href="#injustice"><span class="toc-number">4</span> Exposure to Injustice</a></li>
+          <li><a href="#myths"><span class="toc-number">5</span> Myths and Misconceptions</a></li>
+          <li><a href="#references"><span class="toc-number">6</span> References</a></li>
+        </ul>
+      </div>
+
+      <!-- Identity Section -->
+      <section id="identity">
+        <h2>Identity</h2>
+        
         <p>
-          Dr. Jose Rizal, the Philippines' national hero, was born on June 19, 1861, 
-          in Calamba, Laguna. He grew up in a loving family, being the seventh of eleven 
-          children, and showed remarkable intelligence from an early age. Taught first 
-          by his mother, Rizal excelled in reading, writing, and poetry, and later pursued 
-          formal education in Biñan and at the Ateneo Municipal de Manila, where he 
-          graduated with high honors.
+          <strong>Dr. Jose Protacio Rizal Mercado y Alonso Realonda</strong> 
+          was born on <strong>June 19, 1861</strong> in Calamba, Laguna. 
+          He was baptized on June 22, 1861.
         </p>
-      </div>
-      <div class="rizal-image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Jose_Rizal_full.jpg" alt="Rizal's Image" width="400px">
-      </div>
-    </section>
-  </main>
-  
+        
+        <p>
+          He was the <strong>seventh of eleven children</strong>. During his birth, 
+          his mother, Doña Teodora, had difficulty because Rizal had a large head. 
+          Fr. Collantes even predicted that the child would someday become great.
+        </p>
+        
+        <h3>Meaning of His Name</h3>
+        <p>His full name reflects his heritage and family lineage:</p>
+        <ul class="name-meaning">
+          <li><strong>Jose</strong> – from Saint Joseph</li>
+          <li><strong>Protacio</strong> – from Saint Protacio (Feast day: June 19)</li>
+          <li><strong>Rizal</strong> – from "Ricial" meaning green of young growth</li>
+          <li><strong>Mercado</strong> – from Domingo Lam-Co (Chinese ancestor), related to "market"</li>
+          <li><strong>Y</strong> – means "and"</li>
+          <li><strong>Alonso Realonda</strong> – from his mother's family name</li>
+          <li><strong>Pepe</strong> – from P.P. (Pater Putative) of Saint Joseph</li>
+        </ul>
+        
+        <div class="citation">[1]</div>
+      </section>
+
+      <!-- Family Section -->
+      <section id="family">
+        <h2>Family</h2>
+        
+        <section id="parents">
+          <h3>Parents</h3>
+          
+          <h4>Francisco Mercado (Don Kiko)</h4>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Francisco_r_mercado.jpg/250px-Francisco_r_mercado.jpg" alt="Rizal's Father">
+          <p>
+            Born on May 11, 1818 in Biñan, Laguna. 
+            He studied Latin and Philosophy and later became 
+            Cabeza de Barangay of Calamba. 
+            He was known as a model father and provided Rizal with a good education.
+          </p>
+        
+          
+          <h4>Teodora Alonso Realonda (Doña Teodora)</h4>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Theodora_alonzo_quintos.jpg/250px-Theodora_alonzo_quintos.jpg" alt="Rizal's Mother">
+          <p>
+            Born on November 8, 1826 in Manila. 
+            She was well-educated and studied at Colegio de Santa Rosa.
+            She was Rizal's first teacher and taught him how to read and write,
+            instilling in him a love for learning from an early age.
+          </p>
+        </section>
+        
+
+        <style>
+          #siblings {
+            margin-top: 50px;
+          }
+          #siblings h3 {
+              border-bottom: 1px solid #ccc;
+            }
+          .siblings-list li{
+            border-bottom: 1px solid #ccc;
+           
+            }
+          .siblings-list img {
+              height: 300px;
+              width: 230px;
+              margin-top: 20px;
+            }
+        </style>
+
+        <section id="siblings">
+          <h3>Siblings</h3>
+          <p>Jose Rizal had ten siblings:</p>
+          
+          
+
+          <ul class="siblings-list">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Saturnina_mercado.jpg" alt="">
+            <li><strong>Saturnina (Neneng)</strong> – helped finance Rizal's studies in Europe.</li>
+
+            <img src="https://fmapulse.com/wp-content/uploads/2009/11/FilipinoWrestling.jpg" alt="">
+            <li><strong>Paciano</strong> – Rizal's only brother, later became a revolutionary general.</li>
+
+            <img src="https://tse1.mm.bing.net/th/id/OIP.VrfNFhoPezAfjXI-No0IdgAAAA?cb=defcachec2&w=216&h=288&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+            <li><strong>Narcisa (Sisa)</strong> – found and marked Rizal's grave.</li>
+
+            <img src="https://th.bing.com/th/id/R.ad7e1e1cfe88a3abf8514a5bbbc0c3ab?rik=18uMSJEFbRcaJg&riu=http%3a%2f%2fwww.knightsofrizal.be%2fimages%2ffamily%2f04-olimpia.jpg&ehk=DMfbzmQdyMv0Co3NMe76PYqWhi1FcEHlAIJnjAA7IvA%3d&risl=&pid=ImgRaw&r=0" alt="">
+            <li><strong>Olimpia (Phia)</strong> – helped with Rizal's letters to Leonor Rivera.</li>
+
+            <img src="https://philippinefolklifemuseum.org/wp-content/uploads/Rizal-Family-02-Sister-Lucia-150x150.jpg" alt="">
+            <li><strong>Lucia</strong> – married Mariano Herbosa.</li>
+
+            <img src="https://ourhappyschool.com/sites/default/files/maria.jpg" alt="">
+            <li><strong>Maria (Biang)</strong> – mother of Mauricio Cruz, Rizal's student.</li>
+
+            <img src="https://i.pinimg.com/236x/d5/5d/71/d55d713c8004b203d144c73e735e48ac--fun-facts-philippines.jpg?nii=t" alt="">
+            <li><strong>Concepcion (Concha)</strong> – died at age 3; Rizal's first sorrow.</li>
+
+            <img src="https://ourhappyschool.com/sites/default/files/josefa.jpg" alt="">
+            <li><strong>Josefa (Panggo)</strong> – member of Katipunan.</li>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Do%C3%B1a_Trinidad_Rizal-_Jose_Rizal_sister.jpeg" alt="">
+            <li><strong>Trinidad (Trining)</strong> – kept Rizal's "Mi Ultimo Adios".</li>
+
+            <img src="https://th.bing.com/th/id/R.83057053d25c67da14332aa79cd789b1?rik=dZPeH6lKlYbpgg&riu=http%3a%2f%2f12935964.weebly.com%2fuploads%2f3%2f0%2f8%2f4%2f30846933%2f709699124.JPG&ehk=ELYMpv4XnIJvVfcF0x6ilojdzFfkZByOEKYBgatP7XE%3d&risl=&pid=ImgRaw&r=0" alt="">
+            <li><strong>Soledad (Choleng)</strong> – youngest and Rizal's favorite sister.</li>
+
+          </ul>
+        </section>
+        
+
+        <style>
+             #uncles {
+            margin-top: 50px;
+             }
+          #uncles h3 {
+            border-bottom: 1px solid #ccc;
+          }
+          .uncles-list li {
+            border-bottom: 1px solid #ccc;
+          }
+          
+          .uncles-list img {
+            height: 300px;
+            width: 230px;
+            margin-top: 20px;
+          }
+        </style>
+        <section id="uncles">
+          <h3>Uncles</h3>
+          <p>Three influential uncles helped shape Rizal's development:</p>
+          
+          <ul class="uncles-list">
+            <img src="https://www.gutenberg.org/files/48438/48438-h/images/p038.jpg" alt="">
+            <li><strong>Uncle Jose</strong> – inspired Rizal's love for art and nature.</li>
+
+            <img src="gregorio.png" alt="">
+            <li><strong>Uncle Gregorio</strong> – encouraged his love for education.</li>
+
+            <img src="https://th.bing.com/th/id/OIP.7S_cdjpuL8D6SvzOUveExAHaHa?o=7&cb=defcachec2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+            <li><strong>Uncle Manuel</strong> – trained him in physical and athletic skills.</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education">
+        <h2>Early Education</h2>
+        
+        <p>
+          Rizal first studied under private tutors. One of them was 
+          <strong>Leon Monroy</strong>, who taught him Spanish and Latin.
+          His mother, Doña Teodora, was his first teacher, teaching him how to read and write.
+        </p>
+        
+        <p>
+          He later studied in <strong>Biñan, Laguna</strong> under 
+          Maestro Justin Aquino Cruz, where he learned various subjects including
+          Spanish, Latin, and mathematics.
+        </p>
+        
+        <p>
+          Although he experienced bullying and fights during his early schooling,
+          these experiences shaped his belief that education should be 
+          a safe place for growth and learning.
+        </p>
+        
+        <p>
+          He continued his higher education at the Ateneo Municipal de Manila,
+          where he graduated with honors, and later studied at the University of Manila.
+        </p>
+      </section>
+
+      <!-- Injustice Section -->
+      <section id="injustice">
+        <h2>Exposure to Injustice</h2>
+        
+        <p>
+          Rizal's mother, Doña Teodora, was unjustly accused and imprisoned
+          on charges that were later proven to be false. She was forced to walk
+          50 kilometers from Calamba to Santa Cruz, Laguna, as punishment.
+        </p>
+        
+        <p>
+          This painful event opened Rizal's eyes to the injustices of Spanish rule,
+          greatly influencing his future fight for reforms and his belief in
+          the power of education to bring about change.
+        </p>
+        
+        <p>
+          This experience, along with other injustices he witnessed in colonial
+          Philippines, motivated him to write his famous novels Noli Me Tangere
+          and El Filibusterismo, which exposed the corruption and abuse in Spanish society.
+        </p>
+      </section>
+
+      <!-- Myths Section -->
+      <section id="myths">
+        <h2>Myths and Misconceptions</h2>
+        
+        <p>
+          Several myths and misconceptions have surrounded Rizal's life and works.
+          Below are three notable ones:
+        </p>
+
+        <div class="myth-card">
+          <h3>Myth 1: The “Sa Aking Mga Kabata” Poem</h3>
+          <p>
+            It is commonly believed that Rizal wrote the poem “Sa Aking Mga Kabata” at the age of eight. 
+            However, many historians question this claim due to inconsistencies in language usage, 
+            particularly the use of the letter “K,” which was not widely used during his childhood years.
+          </p>
+        </div>
+
+        <div class="myth-card">
+          <h3>Myth 2: The Champorado Story</h3>
+          <p>
+            Another popular myth claims that Rizal invented champorado. 
+            While this story is often shared in schools and informal discussions, 
+            there is no solid historical evidence to support that he created the dish.
+          </p>
+        </div>
+
+        <div class="myth-card">
+          <h3>Myth 3: The Tsinelas Anecdote</h3>
+          <p>
+            The story of Rizal losing one slipper in the river and throwing the 
+            other one after it is widely told to show his values and mindset. 
+            However, like many childhood stories about historical figures, 
+            this anecdote is considered more of a legend than a verified historical fact.
+          </p>
+        </div>
+      </section>
+
+      <!-- References Section -->
+      <section id="references">
+        <h2>References</h2>
+        <ol class="references">
+          <li>^ <a href="https://sirmykel.wordpress.com/wp-content/uploads/2016/07/jose-rizal-annotations-to-morgas-sucesos.pdf" target="_blank">Rizal, J. (1899). Annotations to Morga's Sucesos.</a></li>
+          <li>^ <a href="https://1library.net/document/q7kpp2kz-the-philippines-a-past-revisited-by-renato-constantino.html" target="_blank">Constantino, R. (1975). The Philippines: A Past Revisited.</a></li>
+          <li>^ <a href="https://books.google.com.ph/books/about/The_Roots_of_the_Filipino_Nation.html?id=H7YuAQAAIAAJ&redir_esc=y" target="_blank">Corpuz, O. (1957). The Roots of the Filipino Nation.</a></li>
+          <li> ^ <a href="https://www.scribd.com/document/275199860/Guerrero-Philippine-Society-and-Revolution" target="_blank">Guerero, L. (1998). The Seven Cycles of Philippine History.</a></li>
+        </ol>
+      </section>
+
+      <!-- See Also Section -->
+      <section id="see-also">
+        <h2>See Also</h2>
+        <ul class="see-also">
+          <li><a href="https://noli-me-tangere.fandom.com/wiki/Noli_Me_Tangere_Wiki" target="_blank">Noli Me Tangere</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/El_filibusterismo" target="_blank">El Filibusterismo</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Katipunan" target="_blank">Katipunan</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Philippine_Revolution" target="_blank">Philippine Revolution</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Ateneo_de_Manila_University" target="_blank">Ateneo Municipal de Manila</a></li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer class="article-footer">
+        <p>This page was last edited on February 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

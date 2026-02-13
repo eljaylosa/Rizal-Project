@@ -1,103 +1,524 @@
+/* Wikipedia-Style CSS for Rizal Article */
+
+/* CSS Reset and Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: 'Courier New', Courier, monospace;
- 
+
+html {
+  font-size: 16px;
 }
 
-.background-image {
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #f6f6f6;
+  color: #202122;
+  line-height: 1.6;
+}
+
+/* Wikipedia Header Styles */
+.wikipedia-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c1/Rizal_Shrine_Calamba_2023.jpg");
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(100%) blur(3px) brightness(60%) contrast(130%);
-  z-index: -1; 
-  
+  right: 0;
+  background-color: #eaecf0;
+  border-bottom: 1px solid #a7d7f9;
+  z-index: 1000;
+  font-family: sans-serif;
 }
 
-main {
-  position: relative;
-  z-index: 1; 
-}
-
-nav {
-  background-color: transparent;
-  padding: 20px
-}
-nav ul {
+.header-top {
   display: flex;
-  list-style-type: none;
-  justify-content: end;
-  flex-wrap: wrap;
-}
-nav ul a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  margin: 5px 10px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 10px;
-  transition: .1s ease-in-out;
-}
-nav ul a:hover {
-  color: rgb(0, 0, 0);
-  text-decoration: underline;
-  background-color: rgb(255, 244, 244);
-}
-
-
-
-/* RIZAL MAIN PROFILE */
-.rizal-main-profile {
-  height: 90vh;
+  justify-content: space-between;
   align-items: center;
-  display: flex;
+  padding: 5px 20px;
+  border-bottom: 1px solid #ccc;
 }
-.rizal-main-title {
-  width: 50%;
+
+.wikipedia-logo {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #3366cc, #6699ff);
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-left: 100px;
   color: white;
+  font-weight: bold;
+  font-size: 24px;
 }
-.rizal-main-title h1 {
-  font-size: 50px;
+
+.wikipedia-logo span {
+  font-family: serif;
+}
+
+.header-links {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.header-links a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+.header-links a:hover {
+  text-decoration: underline;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.header-namespaces, .header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.header-namespaces a, .header-actions a {
+  color: #0645ad;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
+.header-namespaces a.active {
+  background-color: white;
+  border: 1px solid #a2a9b1;
+  border-bottom: none;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 6px 10px;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.search-container button {
+  padding: 6px 12px;
+  background-color: #36c;
+  color: white;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+}
+
+/* Sidebar Toggle (Mobile) */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  padding: 10px;
+  background-color: #36c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Main Container */
+.wikipedia-container {
+  display: flex;
+  margin-top: 90px;
+  max-width: 100%;
+}
+
+/* Sidebar Styles */
+.wikipedia-sidebar {
+  width: 176px;
+  background-color: #f6f6f6;
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 13px;
+  position: fixed;
+  left: 0;
+  top: 90px;
+  bottom: 0;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar-logo {
+  text-align: center;
   margin-bottom: 20px;
 }
-.rizal-main-title h2 {
-  font-size: 30px;
-}
-.rizal-main-title p {
-  font-size: 20px;
-  margin-top: 20px;
-}
 
-/* === Rizal's Image Style === */
-.rizal-image {
-  width: 50%;
+.sidebar-logo a {
+  text-decoration: none;
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 5px;
 }
-.rizal-image img {
-  width: 500px;
-  height: 600px;
+
+.wiki-logo {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #3366cc, #6699ff);
   border-radius: 50%;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-family: serif;
 }
 
-
-/* Will upadate it later */
-/* MOBILE NAV BAR STYLES */
-/* FOR MAIN */
-.mobile-nav-container {
- display: none;
+.wiki-text {
+  font-weight: bold;
+  color: #0645ad;
 }
-/* ====================== */
+
+.sidebar-nav h3 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #54595d;
+  margin: 15px 0 5px 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #c8ccd1;
+  padding-bottom: 3px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav ul li {
+  margin: 3px 0;
+}
+
+.sidebar-nav ul li a {
+  color: #0645ad;
+  text-decoration: none;
+  display: block;
+  padding: 3px 0;
+}
+
+.sidebar-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Area */
+.wikipedia-content {
+  margin-left: 176px;
+  padding: 20px 30px;
+  background-color: white;
+  min-height: 100vh;
+  max-width: 1000px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Article Title */
+.article-title {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+ 
+}
+
+.article-subtitle {
+  font-size: 13px;
+  color: #54595d;
+  margin-bottom: 20px;
+}
+
+/* Infobox Styles */
+.infobox {
+  float: right;
+  clear: right;
+  width: 300px;
+  margin: 0 0 15px 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 5px;
+  font-size: 14px;
+  font-family: sans-serif;
+  border-collapse: collapse;
+}
+
+.infobox th {
+  background-color: #b0c4de;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.infobox-header {
+  background-color: #b0c4de !important;
+  font-size: 22px;
+}
+
+.infobox-subheader {
+  background-color: #dce2e8;
+}
+
+.infobox td {
+  padding: 8px;
+  vertical-align: top;
+}
+
+.infobox-image {
+  text-align: center;
+  padding: 10px;
+}
+
+.infobox-image img {
+  width: 220px;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.image-caption {
+  font-size: 12px;
+  color: #54595d;
+  margin-top: 5px;
+}
+
+/* Lead Paragraph */
+.lead {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* Links */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+/* Table of Contents */
+.toc {
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  display: table;
+  padding: 15px 20px;
+  margin: 20px 0;
+  font-family: sans-serif;
+}
+
+.toc h2 {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline;
+  border-bottom: none;
+}
+
+.toc ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.toc > ul > li {
+  margin: 5px 0;
+}
+
+.toc ul ul {
+  margin-left: 20px;
+}
+
+.toc-number {
+  color: #202122;
+  font-weight: bold;
+}
+
+/* Section Headers */
+section h2 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+section h3 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+section h4 {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+/* Content Lists */
+section ul {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+section ul li {
+  margin: 5px 0;
+}
+
+.name-meaning, .siblings-list, .uncles-list {
+  margin-top: 15px;
+}
+
+/* Myth Cards */
+.myth-card {
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 3px;
+}
+
+.myth-card h3 {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #202122;
+  margin-bottom: 10px;
+}
+
+.myth-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Citations */
+.citation {
+  font-size: 12px;
+  vertical-align: super;
+  color: #0645ad;
+}
+
+/* References */
+.references {
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.references li {
+  margin: 5px 0;
+}
+
+/* See Also */
+.see-also {
+  margin-left: 30px;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.see-also li {
+  margin: 5px 0;
+}
+
+/* Article Footer */
+.article-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #a2a9b1;
+  font-size: 13px;
+  color: #54595d;
+  font-family: sans-serif;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .header-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .header-bottom {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .search-container input {
+    width: 150px;
+  }
+  
+  .sidebar-toggle {
+    display: block;
+  }
+  
+  .wikipedia-sidebar {
+    left: -250px;
+    width: 250px;
+    transition: left 0.3s ease;
+    z-index: 1002;
+  }
+  
+  .wikipedia-sidebar.active {
+    left: 0;
+  }
+  
+  .wikipedia-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .infobox {
+    float: none;
+    width: 100%;
+    margin: 15px 0;
+  }
+  
+  .infobox-image img {
+    width: 100%;
+    max-width: 220px;
+  }
+  
+  .see-also {
+    column-count: 1;
+  }
+  
+  .toc {
+    display: block;
+  }
+  .article-title {
+    margin-top: 70px;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Active TOC Link */
+.toc ul li a.active {
+  background-color: #eaf3ff;
+  color: #202122;
+}
