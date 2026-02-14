@@ -60,7 +60,14 @@ body {
   gap: 15px;
   font-size: 13px;
 }
-
+.toggle-themes {
+  padding: 5px 10px;
+  background-color: #36c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
 .header-links a {
   color: #0645ad;
   text-decoration: none;
@@ -510,6 +517,10 @@ section ul li {
   .article-title {
     margin-top: 70px;
   }
+  .embed-video iframe{
+    width: 360px;
+    height: 215px;
+  }
 }
 
 /* Smooth Scroll */
@@ -522,3 +533,224 @@ html {
   background-color: #eaf3ff;
   color: #202122;
 }
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-theme .wikipedia-header {
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #444;
+}
+
+body.dark-theme .header-top {
+  border-bottom-color: #444;
+}
+
+body.dark-theme .header-links a {
+  color: #6db3f2;
+}
+
+body.dark-theme .header-links a:hover {
+  color: #8ec5f5;
+}
+
+body.dark-theme .header-namespaces a {
+  color: #6db3f2;
+}
+
+body.dark-theme .header-namespaces a.active {
+  background-color: #3d3d3d;
+  border-color: #555;
+}
+
+body.dark-theme .search-container input {
+  background-color: #3d3d3d;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+body.dark-theme .search-container input::placeholder {
+  color: #999;
+}
+
+body.dark-theme .search-container button {
+  background-color: #4a90d9;
+}
+
+body.dark-theme .wikipedia-sidebar {
+  background-color: #252525;
+  border-right-color: #444;
+}
+
+body.dark-theme .sidebar-nav h3 {
+  color: #aaa;
+  border-bottom-color: #444;
+}
+
+body.dark-theme .sidebar-nav ul li a {
+  color: #6db3f2;
+}
+
+body.dark-theme .wiki-text {
+  color: #6db3f2;
+}
+
+body.dark-theme .wikipedia-content {
+  background-color: #1a1a1a;
+}
+
+body.dark-theme .article-title {
+  color: #e0e0e0;
+  border-bottom-color: #444;
+}
+
+body.dark-theme .article-subtitle {
+  color: #aaa;
+}
+
+body.dark-theme .infobox {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+body.dark-theme .infobox th {
+  background-color: #3d4d5d;
+}
+
+body.dark-theme .infobox-header {
+  background-color: #3d4d5d !important;
+}
+
+body.dark-theme .infobox-subheader {
+  background-color: #353535;
+}
+
+body.dark-theme .infobox td {
+  color: #e0e0e0;
+}
+
+body.dark-theme .infobox-image img {
+  border-color: #555;
+}
+
+body.dark-theme .image-caption {
+  color: #aaa;
+}
+
+body.dark-theme a {
+  color: #6db3f2;
+}
+
+body.dark-theme a:visited {
+  color: #8e7cc3;
+}
+
+body.dark-theme .toc {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+body.dark-theme .toc h2 {
+  color: #e0e0e0;
+}
+
+body.dark-theme .toc-number {
+  color: #aaa;
+}
+
+body.dark-theme .toc ul li a.active {
+  background-color: #3d3d3d;
+  color: #e0e0e0;
+}
+
+body.dark-theme section h2 {
+  color: #e0e0e0;
+  border-bottom-color: #444;
+}
+
+body.dark-theme section h3 {
+  color: #e0e0e0;
+}
+
+body.dark-theme section h4 {
+  color: #e0e0e0;
+}
+
+body.dark-theme .myth-card {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+body.dark-theme .myth-card h3 {
+  color: #e0e0e0;
+}
+
+body.dark-theme .myth-card p {
+  color: #ccc;
+}
+
+body.dark-theme .citation {
+  color: #6db3f2;
+}
+
+body.dark-theme .references {
+  color: #ccc;
+}
+
+body.dark-theme .see-also {
+  color: #ccc;
+}
+
+body.dark-theme .see-also li a {
+  color: #6db3f2;
+}
+
+body.dark-theme .article-footer {
+  border-top-color: #444;
+  color: #aaa;
+}
+
+body.dark-theme .lead {
+  color: #ccc;
+}
+
+body.dark-theme .siblings-list li {
+  border-bottom-color: #444;
+  color: #ccc;
+}
+
+body.dark-theme .uncles-list li {
+  border-bottom-color: #444;
+  color: #ccc;
+}
+
+body.dark-theme .name-meaning li {
+  color: #ccc;
+}
+
+/* Mobile responsive dark mode */
+@media screen and (max-width: 768px) {
+  body.dark-theme .wikipedia-sidebar {
+    background-color: #252525;
+  }
+  
+  body.dark-theme .infobox {
+    background-color: #2d2d2d;
+  }
+  
+  body.dark-theme .infobox th {
+    background-color: #3d4d5d;
+  }
+  
+  body.dark-theme .infobox-subheader {
+    background-color: #353535;
+  }
+}
+
